@@ -1,0 +1,46 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "pnpm-lock.yaml"
+  ],
+  "pipeline": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/**",
+        "dist/**",
+        "*.tgz"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/cache/**"
+      ]
+    },
+    "type-check": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/cache/**"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/cache/**"
+      ]
+    }
+  }
+}
