@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Search } from 'lucide-react';
 import AppLayout from '@/components/layout/AppLayout';
 import ProductCard, { type Product } from '@/components/shop/ProductCard';
@@ -237,18 +238,18 @@ export default function ShopPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
-              <a href="/" className="flex items-center space-x-4">
+              <Link href="/" className="flex items-center space-x-4">
                 <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold">T</span>
                 </div>
                 <span className="font-bold text-xl text-white">Tyaakov.dev</span>
-              </a>
+              </Link>
             </div>
             
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-300 hover:text-white transition-colors">Main</a>
-              <a href="/learn" className="text-gray-300 hover:text-white transition-colors">Learn</a>
-              <a href="/shop" className="text-white font-semibold">Skills Shop</a>
+              <Link href="/" className="text-gray-300 hover:text-white transition-colors">Main</Link>
+              <Link href="/learn" className="text-gray-300 hover:text-white transition-colors">Learn</Link>
+              <Link href="/shop" className="text-white font-semibold">Skills Shop</Link>
             </nav>
           </div>
         </div>

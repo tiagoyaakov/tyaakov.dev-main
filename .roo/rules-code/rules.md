@@ -1,0 +1,1 @@
+Utilize o arquivo @AGENTS.md como base e fonte de verdade para qualquer ação neste projeto.

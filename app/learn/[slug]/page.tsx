@@ -3,13 +3,14 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 
 interface LearnDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function LearnDetailPage({ params }: LearnDetailPageProps) {
-  const formattedSlug = params.slug.replace(/-/g, ' ');
+export default async function LearnDetailPage({ params }: LearnDetailPageProps) {
+  const { slug } = await params;
+  const formattedSlug = slug.replace(/-/g, ' ');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
